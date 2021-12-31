@@ -1,4 +1,3 @@
-import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
@@ -15,9 +14,11 @@ export async function getStaticProps(){
   }
 }
 
-const Home: NextPage = (props) => {
-  const { messages } = props
+interface HomeInterface {
+  messages: any;
+}
 
+const Home = (props: HomeInterface) => {
   return (
     <>
       <Head>
@@ -30,7 +31,7 @@ const Home: NextPage = (props) => {
           Your messages
         </h1>
 
-        <Messages messages={messages} />
+        <Messages messages={props.messages} />
       </div>
     </>
   )
