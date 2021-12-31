@@ -1,5 +1,6 @@
 interface MessageInterface {
   text: string;
+  name: string;
 }
 
 const Message = (props: MessageInterface) => {
