@@ -9,7 +9,7 @@ export async function getStaticProps(){
   
   return {
     props: {
-      messages: messages.data
+      messages
     }
   }
 }
